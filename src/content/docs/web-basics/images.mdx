@@ -1,0 +1,93 @@
+---
+title: Images for the Web
+description: How to optimize images on your website! A reference for naming, compressing, and creating alt text for website images.
+---
+
+import { Aside, Tabs, TabItem } from "@astrojs/starlight/components";
+import { Image } from "astro:assets";
+
+## How to Name Pictures
+
+For search engines to find the images best, the key is to use a particular format that is the easiest for the web crawlers to understand.
+
+1. Use a short string of words that describe the image, using keywords when relevant. However, don’t just “stuff” keywords into every single file name, as that could lead to Google marking your content as spam.
+
+2. Separate the words with a hyphen.
+
+**Example:** `grand-river-aerial-view.jpg`
+
+
+## The Importance of Alt Text + How to Write It
+
+Alternative text, or “alt text” is added to an image to describe what it is or what its purpose is in the case of icons and badges. Its primary use is with assistive technologies (like screen readers), but is also used if there is an error when loading the image (such as the file being removed, or slow browsers) to describe what should be there, and as a reference for displaying your images in a search engine. Not including alt text for your meaningful images is not only bad for disabled users of your website, but also worsens your [SEO](seo-basics.mdx).
+
+<Aside title="Decorative Images">
+The exception to having alt text is when an image is purely decorative. An example of a purely decorative image would be a divider between content, or a background image.
+
+On a content management service like Wordpress, you probably won’t be using decorative images as the two uses above will not be added as a normal image, but this is good information to know regardless.
+
+If you do end up with a purely decorative image, the alt text field is allowed to be left empty. If you are unsure whether the picture counts as decorative, err on the side of caution and include it.
+
+A helpful tool to use is the [alt Decision Tree](https://www.w3.org/WAI/tutorials/images/decision-tree/) by [W3C](https://www.w3.org/) to decipher what to do with the alt text.
+
+</Aside>
+
+### Types of Images and How To Write Their Alt-Text
+
+<Tabs>
+    <TabItem label="Regular Images">
+        These images are the most normal to write descriptive text for. W3 Schools suggests that you ask yourself how you would describe the images to a friend over the phone. Try to aim for a succinct description that describes the important parts, not every single detail.
+
+        If it is an image of a product you are selling, make sure to include visible details such as what the labels say, the product name, etc.
+    </TabItem>
+
+    <TabItem label="Icon Buttons">
+        For an icon button, such as a “share” or “favourite” button, or social media link, describe the action that clicking the button does.
+
+        For example, if there was a share button, the alt text would say “Share content”, which describes the action.
+    </TabItem>
+
+    <TabItem label="Badges">
+        An example of a badge image would be something like a star icon besides an item that is a “Staff Favourite”, or a similar image badge. In this case, don’t describe what the symbol looks like (a star in our example), but what it represents (Staff Favourite).
+    </TabItem>
+
+    <TabItem label="Site Logo">
+        Site logos can very easily be described as *“[Insert brand name] logo”*. 
+
+        In the case of a logo in the top navigation bar that links back to the home page (like the Tarobytez logo in the top left corner of this site), you should change it to *“[Insert brand / site name] home”* so the user knows what they are doing when they click it.
+    </TabItem>
+</Tabs>
+
+<br/><br/>
+
+
+**Alt Text Reference Guide**: [W3 School Accessible Image Text Guide](https://www.w3schools.com/accessibility/accessibility_image_text.php)
+
+
+## Compressing Files
+
+Opening a website, and having to wait as it spins, loading and loading for what feels like forever is very frustrating; because of this, the speed that your images load is important for SEO and user experience.
+
+In order to prevent that, make sure that the images you are uploading are compressed to a smaller file size. 
+
+Your site should be set up with an image compression plug-in, so this won’t be a major concern, and that will be gone over in the [Wordpress guides](../wordpress-guides/adding-images). 
+
+If, for whatever reason, you don’t use the plugin, you can always use the image compression site made by Google, called [Squoosh](https://squoosh.app/)! Squoosh is open source, your images never leave your browser (more secure and not added to their external servers) and is super easy to use.
+
+
+## Copyright + Where to Find Pictures / Videos
+
+Respecting copyright and intellectual property on the web is very important, which means that you have to be cautious with what you put up on the site. 
+
+Before using anything on your site you must first find its primary source, and ensure that it is available and marked for commercial use.
+
+I highly recommend using a stock site to ensure that you know the source of the images / videos you are using, and how you can use them (whether attribution is required, etc).
+
+Here are a handful of sites for your reference below! (An * means I personally use it frequently)
+
+
+1. **[Pexels](https://www.pexels.com/)** * - Images / Video (This is a personal favourite! All images and videos on this site are free to use without attribution, though it is nice to still add it)
+2. **[MorgueFile](https://morguefile.com/)** - Images, Video, Vectors
+3. **[Pixabay](https://pixabay.com/)** * - Images, Illustrations, Vectors, Videos, Music, Sound Effects, 3D Models, GIFs
+4. **[Stock Up](https://stockup.sitebuilderreport.com/)** - Images
+5. **[UnSplash](https://unsplash.com/)** * - Images, Illustrations

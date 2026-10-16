@@ -1,0 +1,73 @@
+---
+title: Linking Content
+description: A reference guide for how to link to both external and internal places on the web.
+---
+
+import { Aside } from "@astrojs/starlight/components";
+
+
+Linking content is super important online, both to ensure your users can find what they are looking for, but also the use of "backlinking" to content improves your credibility score with [SEO](../seo-basics)!
+
+There are two different types of URLs (the web address that points your computer to where it needs to go), **absolute** and **relative**. 
+
+## Absolute URLs
+
+Absolute URLs are likely the one that you are familiar with! That is the one that includes the entire link, which can be broken down into 4 parts!
+
+**Example URL: `https://www.example.com/about/about-the-team#greg`**
+
+1. **`https://`** - This is the *protocol* of the url - this rarely changes from website to website, as the ones you will be dealing with are either http (hypertext transfer protocol) or https (hypertext transfer protocol **secure** ← this is the one you want to be linking to, as it means the site is SSL secured). This part must be included when you are linking somewhere that is *not* on your site
+
+2. **`www.example.com`** - This is the *domain* of the url, essentially the name of your website that you purchased online. 
+
+3. **`/about/about-the-team`** - This is the *path* of your url, also known as the "slug". It represents the file path to get to the page. If you are familiar with files on your computer, the example path shown would be a page file called "about-the-team" inside of the "about" folder, represented as a path!
+
+4. **`#greg`** - This is the *fragment* of the url - this is used when you need to link to a specific part of the page. In this example, that would be if you were specifically trying to get the url to the part of the "about-the-team" page that introduced greg. More information about how to create these links will be in the next section!
+
+Absolute URLs should be used when linking to content that is *not* on your website, such as your social media. 
+
+In order to copy every part of the link, including the protocol, most search engines allow you to double-click the web address part at the top of your screen. Then from there you can Control-C (Windows) or Command-C (Mac) to copy, then paste it with Control-V (Windows) or Command-V (Mac).
+
+
+## Relative URLs
+
+Relative URLs are used to point to content on your own site, such as linking to another page. 
+
+You can link with relative URLs by using the *path* / the *slug* talked about in the Absolute URLs section above, including the beginning slash. 
+
+An example of this would be if you are trying to link to your About page, you can use the relative URL `/about` instead of writing out your entire absolute URL.
+
+To get to the homepage, use just the simple / with nothing after it.
+
+### Anchor Links - Linking within the same webpage 
+
+To jump to a later part of the page, you use an "anchor link". You may use this if you want your users to jump to a specific part of the page. This site uses anchor links on the headings which lets you jump to specific headings with the right sidebar. 
+
+To add this type of link, follow these two steps: 
+
+1. First, add an "ID" to the element that you want the link to jump to. For example, on this page, the "Absolute URLs" heading has the ID of "absolute-urls". If you are using Elementor, you can add an ID by clicking on your element, going to the "Advanced" tab, and scroll to the part that says "CSS ID". Enter the id name (usually lowercase, with words separated by hyphens). The ID name **cannot** be reused on the same page. 
+
+2. Then, where you are adding the link, set the link field to # then your id name. For example, the link to the "Absolute URLs" heading is `#absolute-urls` 
+
+Then make sure to test it, but your anchor link should be working!
+
+<Aside title="Linking Email & Phone Number" type="caution">
+    You are able to add links to your email and telephone to directly open either your email app of choice or directly call from a link on a site.
+
+    **However**, this is something that you must be extremely cautious about, as you can risk getting constant spam emails or phone calls. 
+
+    I personally would never recommend adding your phone number linked on your site, except for if you are a business and field calls from clients / customers. In that case, using a business number is a bit of added protection to make sure that your personal cell isn't publicly avaiable. 
+
+    To add an email link directly to your site, set the link to: **`mailto:youremail@example.com`** ← do not use any spaces, and fill in with your email address, of course.
+
+    To add a call link directly on your site, set the link to: **`tel:1234567890`** ← once again, no spaces, replace with your number. 
+
+    If you have an extension in your number, simply add it like this: **`tel:1234567890p5432`** ← where 5432 is the extension number. 
+
+</Aside>
+
+
+<Aside type="tip"> 
+    When adding links to your website, always ensure that you check that the link is working **both** when you are working on the draft, as well as when the page is published!
+</Aside>
+

@@ -1,0 +1,24 @@
+{
+  "name": "guide-site",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/starlight": "^0.42.4",
+    "@astrojs/starlight-tailwind": "^5.0.0",
+    "@catppuccin/starlight": "^2.1.0",
+    "@tailwindcss/vite": "^4.3.3",
+    "astro": "^7.2.10",
+    "sharp": "^0.35.3",
+    "tailwindcss": "^4.3.3"
+  },
+  "allowScripts": {
+    "esbuild": true
+  }
+}

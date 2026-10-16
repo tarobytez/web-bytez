@@ -1,0 +1,79 @@
+---
+title: Measurements Units for the Web
+description: Explaining how content is measured on the web, and what each of the units means!
+---
+
+On digital screens, there is a variety of different options for measuring the size of a given element, so below I have broken down what each of them mean, and when the right place to use them is!
+
+There are two main kinds, **absolute** and **relative**. As the names suggest, absolute units are based on something tangible, usually a real life type of measurement. While they seem appealing since they are familiar, using them on a screen can lead to mixed results, since different screens are different sizes (see: [Responsive Design](../responsive-design) for more information on that). Relative units are the opposite, they are based on something with your page, such as relative to the page size, or the standard font size for that element. They are preferred in most cases on the web since they will scale whether you are on desktop or mobile.
+
+## Absolute Units
+
+### px (Pixels)
+
+**1 pixel = (approximately) 1/96th of an inch**
+
+Pixels are most commonly used as a measurement with images. However, because they are a set size, they don't scale depending on what size the screen is, so I recommend avoiding them when possible to create the best experience for the user.
+
+
+### pt (Points)
+
+**1 point = 1/72nd of an inch**
+
+Points are most commonly used to measure font sizes, based on the same measurement used for printing presses. 
+
+While not terrible for font sizes, a better option is to use EM or REM, so the units scale based on the device.
+
+**Note**: There are clearly more than just these absolute units, but these are the ones you will see as options on your site!
+
+
+## Relative Units
+
+### em
+
+**em is relative to the current font size of the element, or its "parent" element (the container element that is holding it).**
+
+1em = the current font size.
+
+For example, 2em is 2 times what the current font size is. 0.5em is half the size of the current font size. 
+
+em is great to use when you are trying to size a font based on the parent container. For setting general sizes, you should use rem!
+
+### rem
+
+**rem is relative to the "root" element font size, which is standardly 16px.**
+
+1rem = *usually* 16px
+
+For example, if you are 
+
+rem is what should be used for setting the standards for font sizes across the site, such as in the typography style editor.
+
+
+### % (Percent)
+
+**% is relative to what percentage of the parent container is desired**
+
+To explain this, I will give 2 examples. 
+
+1. There is a container taking up 100% of the width of the screen. Inside, there is a heading that you want to be a quarter of the screen. Since the parent container already has 100% width, you can set the width of the heading as 25%.
+
+2. There is a container taking up 50% of the width of the screen. If you wanted the heading to fill that 50% completely, you would set the heading width as 100%, but it would only cover 50% of the entire screen, since 100% of 50% is 50%. If you wanted the heading to only fill half of the container, you would set the heading to 50% width, and that would cover 50% of the container, but 25% of the screen. 
+
+Percentages are good when you are proportionately building elements inside of containers. Often times, however, using a grid or flexbox display can be more effective, and easier to scale across devices. See: [Responsive Design](responsive-design.mdx)
+
+### vw (Viewport Width)
+
+**vw means viewport width, referring to the width of the entire screen. 1vw = 1% of the viewport's width**
+
+vw is entirely based on the size of the window, not the parent container.
+
+vw is used for sizing something compared to the entire window, such as making sure an element covers the entire screen.
+
+### vh (Viewport Height)
+
+**Similar to vw, vh means viewport height, referring to the height of the entire screen. 1vh = 1% of the viewport's height**
+
+vh is entirely based on the size of the window, not the parent container.
+
+vh is used for sizing something compared to the entire window, such as making sure a section of the site covers the full screen's height.

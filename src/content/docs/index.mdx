@@ -1,0 +1,84 @@
+---
+title: Home
+description: Instructional guide for maintaining your website, courtesy of me, Taro, aka Tarobytez :) 
+head:
+  - tag: style
+    content: |
+      h1#_top, .astro-a7po4psb:has(h1#_top) {
+        display: none !important;
+      }
+# The above front matter removes the h1 and its container from view so I can make a custom hero, while keeping the SEO title :)
+---
+
+import { Card, LinkCard, CardGrid, Icon } from "@astrojs/starlight/components";
+import { Image } from "astro:assets";
+
+
+
+## Hello! Welcome to my guide site! 
+
+The purpose of this site is to provide any clients / groups I am working with a place to reference when adding to / managing their sites.
+
+There are two main sections on the site currently. One covers the basics of the web, such as how to boost your content in search engines, how colours work on the web, and designing for different device sizes. The second has guides on editing your Wordpress site, specifically one created with the Astra theme and the Elementor block editor.
+
+If you are someone seeing this site on my portfolio! Hi! This site was built with Astro, using their Starlight docs template. Take a peak around. If you have a job for me, contact me using the email in the header :)
+
+If you have no idea who I am and are happening upon this site, do whatever you want! Learn something, scroll aimlessely, the world is your oyster!
+
+## Web Basics - Quick Links
+
+<CardGrid>
+  <LinkCard
+    title="Intro to Elements"
+    href="/web-basics/intro-to-elements"
+    description="Introducing elements, the building blocks of the web!"
+  />
+  <LinkCard title="SEO Basics" href="/web-basics/seo-basics" description="What do you need to know about Search Engine Optimization, aka how to get people to see your site!" />
+  <LinkCard
+    title="Colours & Contrast for the Web"
+    href="/web-basics/colors"
+    description="How to use colours on your website while staying accessible!"
+  />
+  <LinkCard
+    title="Images for the Web"
+    href="/web-basics/images"
+    description="How to optimize images on your website!"
+  />
+  <LinkCard
+    title="Measurements for the Web"
+    href="/web-basics/measurements"
+    description="Explaining how content is measured on the web, and what each of the units means!"
+  />
+  <LinkCard
+    title="Linking Content"
+    href="/web-basics/linking-content"
+    description="How to link to your own site and others!"
+  />
+  <LinkCard
+    title="Spacing Your Content"
+    href="/web-basics/spacing"
+    description="How to add spacing to your content? The difference between margin and padding (the box model)"
+  />
+  <LinkCard
+    title="Container Types"
+    href="/web-basics/flexbox-and-grid"
+    description="What container should you use for your blocks? Introduction to flexbox and grid."
+  />
+  <LinkCard
+    title="Designing for Different Device Sizes"
+    href="/web-basics/responsive-design"
+    description="How do you add content for both a phone and a laptop? Introduction to responsive design."
+  />
+</CardGrid>
+
+## Wordpress Guides - Quick Links
+
+<CardGrid>
+  <LinkCard
+    title="<Icon name='star'/>Authoring Markdown"
+    href="#"
+    description="Blah blah blah blah"
+  />
+  <LinkCard title="Authoring Markdown" href="#" />
+  <LinkCard title="Authoring Markdown" href="#" />
+</CardGrid>
