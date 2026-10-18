@@ -2,15 +2,95 @@
 title: Colors & Contrast for the Web
 description: How to use colours on your website while staying accessible!
 ---
+import { Image } from "astro:assets";
+import contrastChart from '../../../../src/assets/wb-images/andrew-hick-contrast-chart.png';
 
-- Sticking to your color palette! 
+Colours! We know them, we love them! There is a few things to keep in mind when it comes to color to make sure your site looks good and is accessible to people with visual disabilities. 
 
-- Contrast guidelines and their meanings
-    - AAA
-    - AA
-    - fx
-    - Fail
-- Show andrew hick chart, and how to use it as a reference
+## How are colours represented on the web?
+
+There are a lot of ways colours are described in numbers, but the main ones I'll (briefly) explain are RGB/RGBA and HEX.
+
+### RGB/RGBA
+Stands for Red Green Blue / Red Green Blue Alpha. This is a set of 3 numbers between 0 and 255, correlating to the amount of red, green, and blue is used in the color, with 0 being the least and 255 being the most. RGBA, or RGB Alpha, adds transparency to the colour, with a value between 0 and 1 (0 being fully transparent, 1 being fully opaque). 
+
+**Example:** RGB(246, 80, 44) is a reddish-orange color.
+
+### HEX
+Hex is short for hexidecimal, which, without getting into it, is another type of number system. Hex colours, or hex codes, are 6 or 8 hexidecimal characters (which are numbers 0-9, and letters A-F).
+
+They are created by using the RGB value, and converting each number into the hexidecimal system. Hex codes are essentially the 'nickname' or shortform of the RGB value.
+
+**Example:** The reddish-orange color converted to a hex code is #f6502c. 
+
+## Sticking to your colour palette!
+
+When making your site, there is a bunch of colours set up using your colour palette. These are often called "theme" colours or "global" colors.
+
+During the theme set-up, these will be set up and applied throughout your site automatically, like all headings being a your brand's signature red, etc. 
+
+These colours can also be used when creating a new design though, like wanting a specific heading on a specific page to be your brand's blue instead of the red. I'll get into this more in the Wordpress Guides, but you can access the global values wherever you are changing the color of an element by either clicking a symbol (it looks like a globe grid lattice) next to the standard colour picker, or when you click on the colour picker there is a list of "theme" colours.
+
+Sticking to your colour palette / theme colours and using the global colour configuration is very important. They not only save you time (by not having to write out)
+
+## Accessible Color Design: Colour Contrast
+
+There are a few considerations when it comes to colours on the web and accessibility, but the main one that you need to consider when editing your site's content is maintaining high **contrast**.
+
+Web Contrast Accessibility Guidelines (WCAG) are a list of requirements created by the Web Accessibility Initiative created by the World Wide Web Consortium to create an accesible web for people with visual disabilities. 
+
+Contrast is the difference between the colour of elements in the foreground, like text or icons, and the background colour. It is calculated numerically, and according to WCAG the value needs to meet a certain numerical standard. There are 4 levels of contrast.
+
+### AAA - 7.0 or higher
+
+This is the highest level of contrast, and what we strive for! Especially for small text that can be harder to read at lower levels of contrast. 
 
 
+### AA - 4.5 to 7.0
 
+This is the minimum required by the Accessibility for Ontarians with Disabilities Act. 
+
+**Everything MUST meet this requirement, by law.** 
+
+### fx - 3.0 to 4.5 
+
+fx = fails with exceptions. 
+
+This means that most of the time it is a fail, but for large text (greater than 18pt) and icons, it is acceptable. 
+
+### F - Less than 3.0
+
+Not good! Don't do this! Definitely not this one!
+
+But seriously, it is critical that nothing, especially not text content is **ever** a failed contrast. 
+
+
+### What about gradients and images?
+
+Gradients and images are often used as backgrounds, so how does contrast rules change when there is several different colours to look at?
+
+#### Images
+
+- Talk to Steve on Monday / maybe send a Slack message?
+- Add overlay if issue (will go over in Wordpress guides)
+
+#### Gradients
+
+For a gradient background, check the colours at the brightest and darkest point of the gradient against the text colour with a contrast tool (such as the one mentioned below), and ensure they meet the proper contrast rating. 
+
+The text has to have enough contrast on all colours beneath it, so be careful with background gradients!
+
+
+### Andrew Hick's Contrast chart
+
+[Andrew Hick](https://www.andrewhick.com/), a UK senior accessibility specialist, created a bunch of accessibility tools, but the one I use the most is his colour contrast table.
+
+<Image src={contrastChart} alt="Andrew Hick contrast chart example with a red and cream colour palette."/>
+
+This chart is very helpful as a quick visual reference for what colour text works on what background color. 
+
+I will most likely have provided you with one of these charts for your reference, but in case you need to make a new one, or check new colours, all you have to do is add the hex code into the input field, and press check contrast. 
+
+To see the whole chart, scroll down until you see the button that says "Show contrast table". 
+
+**Check out the tool here:** [Andrew Hick's colour contrast tool](https://www.andrewhick.com/colour/contrast/)
